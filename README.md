@@ -1,12 +1,15 @@
 # FLY_new
 #### 关于项目：
-##
+
 fly的前端展示
 
-于2019.4.24重构，为添加权限管理（登陆）、统计图表整合、实现投诉处理功能
+于2019.4.24重构，为添加权限管理（登陆）、整合统计图表、实现投诉处理功能
 
-#### 关于我们：
+Adopted from bgmanage's framework
+https://github.com/yangchao2015/bgmanage
 ##
+#### 关于我们：
+TEAM FLY
 > 负责人：应圆中
 > 
 > 成员：冯博 林英琮 吴泽成
