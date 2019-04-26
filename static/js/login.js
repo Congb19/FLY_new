@@ -1,8 +1,8 @@
 $(function(){
 	/* ! 屏蔽鼠标的右键菜单*/
-    document.oncontextmenu = function(){
-		return false;
-	}
+    // document.oncontextmenu = function(){
+	// 	return false;
+	// }
     var swiper = new Swiper('#mySwiper',{
     	autoplay: 8000,
     	effect: 'fade',

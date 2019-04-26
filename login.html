@@ -13,19 +13,23 @@
     <meta content="telephone=no" name="format-detection">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <link rel="stylesheet" type="text/css" href="static/_public/swiper-3.4.2.min.css"/>
     <link rel="stylesheet" type="text/css" href='static/css/login.css'>
-    <!--[if lt IE 9]>
+	<script src="static/js/vendor/jquery-3.2.1.min.js"></script>
+
+	<!--[if lt IE 9]>
             <script src="/static/_public/html5.js"></script>
     <![endif]-->
+
 </head>
 <body class="no-select">
 	<header class="nav-header">
 		<div class="container">
 			<i class="logo-space"></i>
 			<div class="title-space">
-				<p class="nav-title-cn">甄视智能数据服务平台软件</p>
-				<p class="nav-title-en">MINI VERSION Intelligent Data Service Platform Software</p>
+				<p class="nav-title-cn">投诉线索智能筛查系统</p>
+				<p class="nav-title-en">FLY VISION</p>
 			</div>
 		</div>
 	</header>
@@ -35,12 +39,12 @@
 				<div class="container">
 					<div class="slider-space" style="margin-top: -180px;">
 						<div class="slider1-title-space">
-							<p class="slider1-title">科技拉近距离，数据温暖人心</p>
+							<p class="slider1-title">科技为人服务，数据利民利己</p>
 						</div>
-						<p class="slider1-subtitle">以AI+为核心，打造一体化智能服务生态</p>
-						<div class="qrcode-space">
-							<span class="qrcode-title">微信公众号<br/>关注小视，开启智慧生活</span>
-						</div>
+						<p class="slider1-subtitle">以AI+为核心，打造省时高效的筛查服务</p>
+						<!--<div class="qrcode-space">-->
+							<!--<span class="qrcode-title">微信公众号<br/>关注小视，开启智慧生活</span>-->
+						<!--</div>-->
 					</div>
 				</div>
 			</div>
@@ -49,23 +53,23 @@
 					<div class="slider-space" style="margin-top: -200px;">
 						<div class="slider2-title-space">
 							<div class="slider2-title">
-								<span>小视科技产品展示</span>
+								<span>核心创新亮点</span>
 							</div>
 						</div>
 						<div class="slider2-plist">
 							<div class="slider2-plist-item item-1" style="background-image: url(static/images/login/iconbg_01.png);">
 								<div class="plist-item-img" style="background-image: url(static/images/login/user_01.png);">
-									<span class="plist-item-title">人脸识别</span>
+									<span class="plist-item-title">情感分析</span>
 								</div>
 							</div>
 							<div class="slider2-plist-item item-2" style="background-image: url(static/images/login/iconbg_02.png);">
 								<div class="plist-item-img" style="background-image: url(static/images/login/Smile_01.png);">
-									<span class="plist-item-title">活体检测</span>
+									<span class="plist-item-title">无效信息筛查</span>
 								</div>
 							</div>
 							<div class="slider2-plist-item item-3" style="background-image: url(static/images/login/iconbg_03.png);">
 								<div class="plist-item-img" style="background-image: url(static/images/login/rocket_01.png);">
-									<span class="plist-item-title">大数据开发</span>
+									<span class="plist-item-title">模型不断训练</span>
 								</div>
 							</div>
 						</div>
@@ -78,15 +82,15 @@
 						<div class="slider3-list">
 							<div class="slider3-item" style="background-image: url(static/images/login/iconbg_04.png);top: 80px;left: 20px;">
 								<div class="slider3-item-img" style="background-image: url(static/images/login/shield.png);top: 40px;left: 70px;"></div>
-								<p class="slider3-item-title" style="left: 59px;bottom: 46px;">贷前反欺诈</p>
+								<p class="slider3-item-title" style="left: 59px;bottom: 46px;">安全反爬虫</p>
 							</div>
 							<div class="slider3-item item-center" style="background-image: url(static/images/login/iconbg_05.png);top: 0;left: 300px;">
 								<div class="slider3-item-img" style="background-image: url(static/images/login/gear.png);top: 44px;left: 66px;"></div>
-								<p class="slider3-item-title" style="left: 57px;bottom: 40px;">大数据建模</p>
+								<p class="slider3-item-title" style="left: 57px;bottom: 40px;">简洁易用</p>
 							</div>
 							<div class="slider3-item" style="background-image: url(static/images/login/iconbg_06.png);top: 80px;left: 580px;">
 								<div class="slider3-item-img" style="background-image: url(static/images/login/date.png);top: 45px;left: 56px;"></div>
-								<p class="slider3-item-title" style="left: 58px;bottom: 40px;">信用评级</p>
+								<p class="slider3-item-title" style="left: 58px;bottom: 40px;">扩充性良好</p>
 							</div>
 						</div>
 						<div class="slider3-title"></div>
@@ -106,19 +110,58 @@
 			<label for="pwd" class="input-label" style="background-image: url(static/images/login/LOCK.png);"></label>
 			<input type="password" id="pwd" class="user-input" placeholder="密码"/>
 		</div>
-		<div class="login-btn">
+		<div class="login-btn" id="login-button">
 			<div class='spinner'>
 				<div class="bounce-1"></div>
 				<div class="bounce-2"></div>
 			</div>
 			<span class="login-words">立即登录</span>
 		</div>
-		<a href="javascript: void(0);" class="fpwd">忘记密码？</a>
+		<!--<a href="javascript: void(0);" class="fpwd">忘记密码？</a>-->
 	</div>
 	<footer class="nav-footer">联系我们</footer>
+
 <!--描述：最后加载js，增加页面相应速度-->
-<script src='static/_public/jquery-2.1.1.min.js' type='text/javascript' charset='utf-8'></script>
+	<script>
+        let usernamet = $("#username");
+        let passwordt = $("#pwd");
+        $("#login-button").click(function() {
+        	// alert("aaa");
+            let usn = usernamet;
+            let searchUrl = encodeURI("index.html?searchText=" + searchText);
+            // location.href = "http://www.w3school.com.cn"
+            location.href = searchUrl;
+        });
+		// $("#login-button").click(function() {
+		//     if ($.isEmptyObject(usernamet)||$.isEmptyObject(passwordt)) {
+		// 			alert("请完整输入账号/密码！");
+		// 		}
+		//     else {
+        //         $.post("url",  {
+		// 			username: usernamet,
+		// 			password: passwordt,
+		// 		},
+		// 		function(data, status) {
+        //             //测试用alert
+		// 			alert("数据: \n" + data + "\n状态: " + status);
+		// 		});
+        //         if (code == 201) {
+        //             alert("账号/密码错误！请重新输入");
+		// 			$("#username").empty();
+        //             $("#pwd").empty();
+		// 		}
+		// 		else if(code == 200) {
+		// 			let usn = data.username;
+        //             let searchUrl = encodeURI("index.html?searchText=" + searchText);
+        //             location.href = searchUrl;
+		// 		}
+		// 	}
+		// });
+	</script>
+
+<!--<script src='static/_public/jquery-2.1.1.min.js' type='text/javascript' charset='utf-8'></script>-->
 <script src="static/_public/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="static/js/login.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 </html>

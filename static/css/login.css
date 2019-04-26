@@ -42,13 +42,13 @@ html,body {
     background: #999;
 }
 /*禁止选中*/
-.no-select {
-    -webkit-user-select: none; /* Chrome all / Safari all */
-    -moz-user-select: none; /* Firefox all */
-    -ms-user-select: none; /* IE 10+ */
-    -o-user-select: none;
-    user-select: none;
-}
+/*.no-select {*/
+    /*-webkit-user-select: none; !* Chrome all / Safari all *!*/
+    /*-moz-user-select: none; !* Firefox all *!*/
+    /*-ms-user-select: none; !* IE 10+ *!*/
+    /*-o-user-select: none;*/
+    /*user-select: none;*/
+/*}*/
 /*头部导航*/
 .nav-header {
 	position: absolute;

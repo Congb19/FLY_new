@@ -15,14 +15,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" type="text/css" href='static/css/common.css'>
     <link rel="stylesheet" type="text/css" href='static/css/base.css'>
-    <!--[if lt IE 9]>
-            <script src="/static/_public/html5.js"></script>
+	<script src="static/js/vendor/jquery-3.2.1.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="/static/_public/html5.js"></script>
     <![endif]-->
 </head>
 <body>
 
 <nav class="navbar">
-	<div class="header-logo"></div>
+	<div class="header-logo">
+		<div class="userinf" id="usn">jgq123</div>&nbsp;
+		<div class="userinf logout" id="logout">登出</div>
+	</div>
 </nav>
 
 <div class="main-menus no-select" id="mainMenus">
@@ -96,7 +100,16 @@
 	<div class="main-pages" id="main-pages"></div>
 </div>
 <!--描述：最后加载js，增加页面相应速度-->
-<script type='text/javascript' src='static/_public/jquery-2.1.1.min.js' charset='utf-8'></script>
+<script>
+	$("#logout").click(function () {
+        $(location).attr('href', 'login.html');
+    });
+    let searchUrl = window.location.href;
+    let searchData = searchUrl.split("="); //截取 url中的“=”,获得“=”后面的参数
+    let searchText = decodeURI(searchData[1]); //decodeURI解码
+    $("#usn").val(searchText);
+</script>
+<!--<script type='text/javascript' src='static/_public/jquery-2.1.1.min.js' charset='utf-8'></script>-->
 <script type='text/javascript' src='static/_public/jquery.form.js' charset='utf-8'></script>
 <script type='text/javascript' src='static/_public/flatpickr.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='static/js/common.js' charset='utf-8'></script>
