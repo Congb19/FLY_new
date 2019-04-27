@@ -11,7 +11,7 @@ html,body {
 	background-color: #FFFFFF;
 	border: solid 1px #d5dde0;
 	box-shadow: 0 4px 8px rgba(0,0,0,.1);
-	max-height: 400px;
+	/*max-height: 400px;*/
 }
 .card-space .card-title {
 	position: relative;
@@ -30,6 +30,7 @@ html,body {
 }
 .card-space .card-container {
 	position: relative;
+	/*width: 1000px;*/
 	padding: 0 12px;
 }
 .card-space .search-item {

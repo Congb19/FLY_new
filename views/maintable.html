@@ -16,9 +16,26 @@
     <link rel="stylesheet" type="text/css" href='../static/css/common.css'>
     <link rel="stylesheet" type="text/css" href='../static/css/view-default.css'>
     <link rel="stylesheet" type="text/css" href="../static/_public/flatpickr.min.css"/>
+
+    <script src="../static/js/vendor/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap-table.min.css">
+    <script src="../static/js/vendor/bootstrap-table.min.js"></script>
+    <script src="../static/js/vendor/bootstrap-table-zh-CN.min.js"></script>
+
+
+    <script src="../static/js/vendor/echarts.common.min.js"></script>
+
+
+
     <!--[if lt IE 9]>
     <script src="../static/_public/html5.js"></script>
     <![endif]-->
+
+
 </head>
 <body>
 <div class="card-space">
@@ -50,10 +67,12 @@
 <div class="card-space">
     <div class="card-title">查询结果</div>
     <div class="card-container">
-        <p>各项客户计费调用查询数量占比</p>
+        <div id="mytab"></div>
     </div>
 </div>
-<script type='text/javascript' src='../static/_public/jquery-2.1.1.min.js' charset='utf-8'></script>
+
+<script src="../static/js/maintable.js"></script>
+<!--<script type='text/javascript' src='../static/_public/jquery-2.1.1.min.js' charset='utf-8'></script>-->
 <script type='text/javascript' src='../static/_public/jquery.form.js' charset='utf-8'></script>
 <script type='text/javascript' src='../static/_public/flatpickr.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='../static/js/common.js' charset='utf-8'></script>
