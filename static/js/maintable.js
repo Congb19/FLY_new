@@ -4,7 +4,10 @@ $('#mytab').bootstrapTable({
     toolbar: "#toolbar",
     sidePagination: "true",
     striped: true, // 是否显示行间隔色
-    search : "true",
+    // search : "true",
+    // searchOnEnterKey: "true",
+    // customSearch: "customsearch",
+    // showColumns: "true",
     uniqueId: "ID",
     pageSize: "8",
     pagination: false, // 是否分页
@@ -23,16 +26,22 @@ $('#mytab').bootstrapTable({
         },
         {
             field: 'type',
-            title: '类型'
+            title: '类型',
+            // formatter: setSelect
         },
         {
             field: 'content',
             title: '信件内容'
         },
         {
+            field: 'keyword',
+            title: '关键词',
+            // formatter: actionFormatter2,
+        },
+        {
             field: 'price',
             title: '操作',
-            width: 120,
+            width: 150,
             align: 'center',
             valign: 'middle',
             formatter: actionFormatter,
@@ -44,8 +53,36 @@ $('#mytab').bootstrapTable({
 function actionFormatter(value, row, index) {
     var id = value;
     var result = "";
+    result += "<a href='javascript:;' class='btn btn-xs btn-info' onclick=findsimilar() title='查看相似事件'  data-toggle=\"modal\" data-target=\".bs-similar-modal-lg\"><span class='glyphicon glyphicon-search'></span>查看相似事件</a>&nbsp;";
+    result += "<a href='javascript:;' class='btn btn-xs btn-warning' onclick=chakanxiangqing() title='查看详情/回复'  data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><span class='glyphicon glyphicon-pencil'></span>查看详情/回复</a>&nbsp;";
+    // result += "<a href='javascript:;' class='btn btn-xs btn-danger' onclick=\"DeleteByIds('" + id + "')\" title='退回'><span class='glyphicon glyphicon-remove'></span></a>";
+    return result;
+}
+//关键词栏的样式
+function actionFormatter2(value, row, index) {
+    var id = value;
+    var result = "";
     result += "<a href='javascript:;' class='btn btn-xs btn-info' onclick=findsimilar() title='查看相似事件'  data-toggle=\"modal\" data-target=\".bs-similar-modal-lg\"><span class='glyphicon glyphicon-search'></span></a>&nbsp;";
     result += "<a href='javascript:;' class='btn btn-xs btn-warning' onclick=chakanxiangqing() title='查看详情/回复'  data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><span class='glyphicon glyphicon-pencil'></span></a>&nbsp;";
     // result += "<a href='javascript:;' class='btn btn-xs btn-danger' onclick=\"DeleteByIds('" + id + "')\" title='退回'><span class='glyphicon glyphicon-remove'></span></a>";
     return result;
+}
+function customsearch(data, text) {
+    return data.filter(function (row) {
+        return row.field.indexOf(text) > -1
+    })
+}
+
+function setSelect(value, row, index)
+{
+    var strHtml = "";
+    if (value == "Item 1")
+    {
+        strHtml = "<select class='ss'><option value='Item 1' selected='selected'>Item 1</option><option value='Item 2'>Item 2</option></select>";
+    }
+    else
+    {
+        strHtml = "<select class='ss'><option value='Item 1' >Item 1</option><option value='Item 2' selected='selected'>Item 2</option></select>";
+    }
+    return strHtml;
 }
