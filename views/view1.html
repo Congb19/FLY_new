@@ -21,37 +21,10 @@
     <![endif]-->
 </head>
 <body>
-<div class="card-space">
-	<div class="card-title">查询条件</div>
-	<div class="card-container">
-		<div class="search-item">
-			<label class="input-label">公司名称：</label>
-			<input type="text" class="search-input"/>
-		</div>
-		<div class="search-item">
-			<label class="input-label">查询日期：</label>
-			<input type="text" class="search-input" data-do="timepick"/>
-		</div>
-		<div class="search-item">
-			<label class="input-label">地区：</label>
-			<div class="select-dropdown search-input" data-do="select" data-val="0">
-				<div class="text-warp selected-value"></div>
-				<input type="hidden" name="selectValue" value="0"/>
-				<ul class="dropdown-menu">
-					<li class="dropdown-item text-warp" data-value="0">中国</li>
-					<li class="dropdown-item text-warp" data-value="1">美国</li>
-					<li class="dropdown-item text-warp" data-value="2">俄罗斯</li>
-					<li class="dropdown-item text-warp" data-value="3">罗马尼亚</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="card-space">
-	<div class="card-title">查询结果</div>
-	<div class="card-container">
-		<p>各项客户计费调用查询数量占比</p>
-	</div>
+<div class="card-space card-space2"  style="overflow:hidden">
+	<!--<div class="row J_mainContent" id="content-main">-->
+		<iframe id="J_iframe" width="100%" height="100%" src="../../hAdmin/hAdmin/index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
+	<!--</div>-->
 </div>
 <script type='text/javascript' src='../static/_public/jquery-2.1.1.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='../static/_public/jquery.form.js' charset='utf-8'></script>
