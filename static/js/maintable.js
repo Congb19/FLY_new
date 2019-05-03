@@ -6,7 +6,7 @@ $('#mytab').bootstrapTable({
     striped: true, // 是否显示行间隔色
     // search : "true",
     // searchOnEnterKey: "true",
-    // customSearch: "customsearch",
+    // customSearch: "customSearch",
     // showColumns: "true",
     uniqueId: "ID",
     pageSize: "8",
@@ -32,6 +32,10 @@ $('#mytab').bootstrapTable({
         {
             field: 'content',
             title: '信件内容'
+        },
+        {
+            field: 'elevel',
+            title: '紧急程度'
         },
         {
             field: 'keyword',
@@ -67,11 +71,6 @@ function actionFormatter2(value, row, index) {
     // result += "<a href='javascript:;' class='btn btn-xs btn-danger' onclick=\"DeleteByIds('" + id + "')\" title='退回'><span class='glyphicon glyphicon-remove'></span></a>";
     return result;
 }
-function customsearch(data, text) {
-    return data.filter(function (row) {
-        return row.field.indexOf(text) > -1
-    })
-}
 
 function setSelect(value, row, index)
 {
@@ -85,4 +84,26 @@ function setSelect(value, row, index)
         strHtml = "<select class='ss'><option value='Item 1' >Item 1</option><option value='Item 2' selected='selected'>Item 2</option></select>";
     }
     return strHtml;
+}
+function queryParams(params) {
+    var param = {};
+    $('#query-form').find('[name]').each(function () {
+        var value = $(this).val();
+        if (value != '') {
+            param[$(this).attr('name')] = value;
+        }
+    });
+
+    param['pageSize'] = params.limit;   //页面大小
+    param['pageNumber'] = params.offset;   //页码
+
+    return param;
+}
+function customSearch(text) {
+    $table.bootstrapTable('refresh');//刷新Table，Bootstrap Table 会自动执行重新查询
+}
+function resetSearch() {
+    $('#query-form').find('[name]').each(function () {
+        $(this).val('');
+    });
 }

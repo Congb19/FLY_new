@@ -18,6 +18,9 @@ html,body {
 	margin: 0px;
 	padding: 0px;
 }
+.card-space3{
+	height: auto;
+}
 
 .card-space .card-title {
 	position: relative;
