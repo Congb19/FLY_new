@@ -126,11 +126,13 @@
         let usernamet = $("#username");
         let passwordt = $("#pwd");
         $("#login-button").click(function() {
-        	// alert("aaa");
-            let usn = usernamet;
-            let searchUrl = encodeURI("index.html?searchText=" + searchText);
-            // location.href = "http://www.w3school.com.cn"
-            location.href = searchUrl;
+        	// // alert("aaa");
+            // let usn = usernamet;
+            // let searchUrl = encodeURI("index.html?searchText=" + searchText);
+            // // location.href = "http://www.w3school.com.cn"
+            // location.href = searchUrl;
+			if (usernamet != 'admin') location.href = 'index.html';
+			else location.href = 'index.html';
         });
 		// $("#login-button").click(function() {
 		//     if ($.isEmptyObject(usernamet)||$.isEmptyObject(passwordt)) {
