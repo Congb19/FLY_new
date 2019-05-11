@@ -1,5 +1,5 @@
 $('#mytab').bootstrapTable({
-    url: "../static/js/tableconfig.json",
+    url: "../static/js/tableconfig2.json",
     queryParams: "queryParams",
     toolbar: "#toolbar",
     sidePagination: "true",
@@ -17,9 +17,9 @@ $('#mytab').bootstrapTable({
     showColumns: true,                  //是否显示所有的列
     showRefresh: true,                  //是否显示刷新按钮
     columns: [{
-            field: 'id',
-            title: '编号'
-        },
+        field: 'id',
+        title: '编号'
+    },
         {
             field: 'time',
             title: '时间'
@@ -29,10 +29,7 @@ $('#mytab').bootstrapTable({
             title: '类型',
             // formatter: setSelect
         },
-        {
-            field: 'act',
-            title: '处理情况',
-        },
+
         {
             field: 'content',
             title: '信件内容'
@@ -61,8 +58,8 @@ $('#mytab').bootstrapTable({
 function actionFormatter(value, row, index) {
     var id = value;
     var result = "";
-    result += "<a href='javascript:;' class='btn btn-xs btn-warning' onclick=findsimilar() title='相似事件'  data-toggle=\"modal\" data-target=\".bs-similar-modal-lg\"><span class='glyphicon glyphicon-tags'></span>&nbsp;相似事件</a>&nbsp;";
-    result += "<a href='javascript:;' class='btn btn-xs btn-info' onclick=chakanxiangqing() title='查看详情'  data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><span class='glyphicon glyphicon-search'></span>&nbsp;查看详情</a>&nbsp;";
+    result += "<a href='javascript:;' class='btn btn-xs btn-danger' onclick=findsimilar() title='删除事件'  data-toggle=\"modal\" data-target=\".bs-similar-modal-lg\"><span class='glyphicon glyphicon-search'></span>删除事件</a>&nbsp;";
+    result += "<a href='javascript:;' class='btn btn-xs btn-warning' onclick=chakanxiangqing() title='查看详情'  data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><span class='glyphicon glyphicon-pencil'></span>查看详情</a>&nbsp;";
     // result += "<a href='javascript:;' class='btn btn-xs btn-danger' onclick=\"DeleteByIds('" + id + "')\" title='退回'><span class='glyphicon glyphicon-remove'></span></a>";
     return result;
 }
