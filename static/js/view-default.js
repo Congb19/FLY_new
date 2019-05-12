@@ -6,7 +6,7 @@
     /* ! 处理ajax请求失败的场景*/
     $(document).ajaxError(function(event,request,settings){
     	module.loading.hide();
-    	module.alert('呀，加载失败啦！');
+    	// module.alert('呀，加载失败啦！');
     });
     var params = {
     	nowTabid: $(window.frameElement).closest('.main-page-item').attr('data-tabid')
